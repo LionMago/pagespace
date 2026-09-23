@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@400;500&display=swap');
+:root{color-scheme:dark;--ice:#e7edf0;--silver:#b4c3cb;--gold:#beac85;--serif:'Cinzel',Georgia,serif;--sans:'Inter',Arial,sans-serif}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#0b141b;color:var(--ice)}body{font-family:var(--sans);overflow-x:hidden}button{font:inherit;color:inherit;cursor:pointer}button:focus-visible{outline:2px solid var(--gold);outline-offset:7px}[hidden]{display:none!important}.landscape{position:fixed;inset:0;background:url('assets/winter.png') center center/cover no-repeat;transform:scale(1.035);animation:landscape-breathe 35s ease-in-out infinite alternate}.landscape:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,12,19,.35),rgba(4,12,19,.05) 35%,rgba(4,12,19,.65)),linear-gradient(90deg,rgba(4,12,19,.2),transparent,rgba(4,12,19,.2))}#snow,.atmosphere{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}.atmosphere{overflow:hidden}.mist{position:absolute;width:170%;height:45%;left:-35%;filter:blur(28px);opacity:.25;background:radial-gradient(ellipse at 25% 60%,#c7dee3 0%,transparent 38%),radial-gradient(ellipse at 70% 40%,#a2bfc9,transparent 45%);animation:mist 30s ease-in-out infinite alternate}.mist-one{bottom:-10%}.mist-two{top:30%;opacity:.13;animation-duration:43s;animation-direction:alternate-reverse}.dragon-flight{position:fixed;top:20%;left:-20%;width:clamp(100px,15vw,230px);pointer-events:none;animation:fly 46s linear infinite;opacity:.7}.dragon-flight img{width:100%;height:auto;animation:glide 4s ease-in-out infinite alternate}.dragon-flight.distant{top:30%;width:clamp(55px,6vw,100px);animation-duration:62s;animation-delay:-28s;opacity:.45}.screen{position:relative;min-height:100svh;animation:reveal 1.1s ease both}.entrance{display:flex;flex-direction:column;padding:36px 4.4vw}.topline,.entrance-footer,.profile-header,.profile-footer{display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.24em;color:var(--silver);gap:24px}.topline{padding-bottom:22px;border-bottom:1px solid #bacbd52b}.entrance-title{text-align:center;margin:auto;padding:70px 0 85px;text-shadow:0 3px 26px #0009}.eyebrow{font-size:12px;letter-spacing:.45em;color:var(--silver);margin:0 0 28px}h1{font-family:var(--serif);font-weight:400;margin:0;line-height:1.05;letter-spacing:.05em}h1 span{display:block;font-size:clamp(25px,3.5vw,55px);letter-spacing:.29em;padding-left:.29em}h1 strong{display:block;font-size:clamp(50px,8.5vw,132px);font-weight:500;margin-top:8px;letter-spacing:.055em}.rule{display:flex;align-items:center;justify-content:center;gap:18px;width:220px;margin:26px auto 20px;color:var(--gold);font-size:14px}.rule:before,.rule:after{content:'';height:1px;width:80px;background:linear-gradient(90deg,transparent,#bbaa84)}.rule:after{transform:rotate(180deg)}.winter{font:italic clamp(19px,2vw,27px) Georgia,serif;color:#d6dfe4;letter-spacing:.045em;margin:0 0 40px}.enter-button{min-height:58px;padding:16px 22px 16px 28px;border:1px solid #c7b48780;background:#0b151a70;backdrop-filter:blur(6px);font-size:12px;letter-spacing:.23em;display:inline-flex;align-items:center;gap:35px;transition:background .25s,border-color .25s,transform .25s}.enter-button:hover{background:#172732cc;border-color:var(--gold);transform:translateY(-2px)}.button-symbol{font-size:24px;color:var(--gold)}.entrance-footer{padding-top:22px;border-top:1px solid #bacbd52b;font-size:11px}.cinema{background:#000;display:flex;align-items:center;justify-content:center;padding-bottom:75px}.cinema iframe{border:0;width:100%;height:calc(100svh - 75px);display:block}.cinema-bar{position:absolute;bottom:0;left:0;right:0;min-height:75px;display:flex;justify-content:space-between;align-items:center;padding:14px 4vw;gap:20px;background:#080d12}.cinema-bar p{font-size:13px;color:var(--silver);margin:0;max-width:70ch}.text-button{background:none;border:0;padding:12px 0;font-size:14px;white-space:nowrap}.text-button:hover{color:var(--gold)}.text-button span{margin-left:12px}.profile{display:flex;flex-direction:column;padding:28px 4.4vw;background:linear-gradient(90deg,#061018b8,#06101870,#061018b8);backdrop-filter:blur(3px)}.profile-header{border-bottom:1px solid #bacbd52b;padding-bottom:14px}.profile-content{text-align:center;margin:auto;max-width:840px;padding:65px 0}.profile-ornament{font-size:40px;color:var(--gold);display:block;margin:36px 0}h2{font-family:var(--serif);font-size:clamp(38px,6vw,78px);font-weight:400;line-height:1.2;overflow-wrap:anywhere;margin:0}#profile-bio{font:20px/1.8 Georgia,serif;color:#d0dce3;white-space:pre-line}.profile-footer{justify-content:center;font-size:11px;padding:20px 0;border-top:1px solid #bacbd52b}.profile-footer span{color:var(--gold)}body[data-screen="cinema"] .atmosphere,body[data-screen="cinema"] #snow,body[data-screen="cinema"] .dragon-flight{visibility:hidden}.noscript{position:fixed;bottom:0;left:0;right:0;text-align:center;background:#101820;padding:20px}
+@keyframes mist{to{transform:translateX(20%)}}@keyframes landscape-breathe{to{transform:scale(1.09)}}@keyframes fly{0%{transform:translate(0,0)}100%{transform:translate(145vw,-8vh)}}@keyframes glide{to{transform:translateY(10px) rotate(3deg)}}@keyframes reveal{from{opacity:0}to{opacity:1}}
+@media(max-width:600px){.entrance{padding:24px}.topline{font-size:10px;letter-spacing:.16em}.entrance-title{padding:65px 0}.eyebrow{font-size:11px;letter-spacing:.3em}h1 strong{font-size:clamp(39px,11vw,65px)}h1 span{font-size:25px}.entrance-footer{justify-content:center;font-size:10px}.scroll-note{display:none}.profile-header>span{display:none}.cinema-bar{align-items:flex-start}.cinema-bar p{font-size:12px}.profile{padding:24px}.profile-footer{font-size:9px;letter-spacing:.13em}.dragon-flight{top:24%}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}#snow,.dragon-flight{display:none}.landscape{transform:none}}
+
+/* Forged metal, heraldic geometry and vaulted portrait frames. */
+.landscape{background-image:url('assets/winter-castles.png')}
+.enter-button{position:relative;isolation:isolate;gap:24px;min-height:78px;padding:14px 30px;border:0;clip-path:polygon(6% 0,94% 0,100% 50%,94% 100%,6% 100%,0 50%);background:linear-gradient(125deg,#483625,#e0cca0 28%,#8e7043 49%,#e6d2aa 72%,#4d3a27);filter:drop-shadow(0 5px 16px #000);font-family:var(--serif);letter-spacing:.14em}
+.enter-button:before{content:'';position:absolute;z-index:-1;inset:2px;clip-path:inherit;background:linear-gradient(100deg,#14202a,#243642 48%,#101b24);box-shadow:inset 0 0 18px #000}
+.enter-button:after{content:'';position:absolute;inset:7px 17px;border-top:1px solid #c8ad7266;border-bottom:1px solid #c8ad7266;pointer-events:none}
+.enter-button:hover{background:linear-gradient(120deg,#b18445,#f9e6b6,#a2773c);transform:translateY(-3px);filter:drop-shadow(0 0 20px #c2a16a55)}
+.enter-button:focus-visible{outline:none;filter:drop-shadow(0 0 6px #fff);background:#fff1bd}
+.enter-label{font-size:14px;font-weight:600}.enter-label small{display:block;margin-top:6px;font:9px var(--sans);letter-spacing:.3em;color:#b9b1a0}.seal{font-size:21px;color:#d7bd88;text-shadow:0 1px 2px #000}
+.cinema video{width:100%;height:calc(100svh - 75px);object-fit:contain;background:#000;display:block}
+.cinema-bar .text-button{font-family:var(--serif);border-bottom:1px solid #b59864;letter-spacing:.06em;color:#dcc597}
+.profile{background:radial-gradient(ellipse at 50% 45%,#382720bc,#0c1117ed 75%);backdrop-filter:blur(8px)}
+.profile-header .text-button{font:12px var(--serif);letter-spacing:.08em;border:1px solid #90764c70;padding:12px 22px;clip-path:polygon(9px 0,100% 0,100% calc(100% - 9px),calc(100% - 9px) 100%,0 100%,0 9px);background:#1b1b1ab0}
+.profile-content{padding:40px 0 16px;margin:0 auto;max-width:100%}.profile-content .eyebrow{margin-bottom:15px;color:#c4a875}.profile-content h2{font-size:clamp(30px,4.5vw,58px)}.profile-content .rule{margin:14px auto 10px}.profile-content #profile-bio{font-size:17px;margin:8px 0;color:#c2c1bd}
+.royal-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:clamp(24px,5vw,76px);width:min(950px,100%);margin:35px auto 45px;padding:0 15px}
+.royal-portrait{margin:24px 0 0;text-align:center;min-width:0}.royal-portrait.sovereign{margin-top:0}
+.portrait-frame{position:relative;padding:12px;aspect-ratio:3/4;border:1px solid #997643;background:linear-gradient(110deg,#362718,#b99556 15%,#48341f 20%,#e0c18a 23%,#46301b 28%,#795a30 70%,#d4b273 78%,#382717);border-radius:46% 46% 4px 4px / 28% 28% 4px 4px;box-shadow:0 16px 40px #0009,inset 0 0 0 3px #141110,inset 0 0 0 5px #b492596b;transition:transform .5s,filter .5s}
+.portrait-frame:before{content:'';position:absolute;z-index:2;inset:7px;border:1px solid #eccb8177;border-radius:inherit;pointer-events:none}
+.portrait-frame:after{content:'';position:absolute;z-index:2;inset:14px;box-shadow:inset 0 0 28px 6px #000b;border-radius:inherit;pointer-events:none}
+.portrait-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 28%;border-radius:inherit;filter:saturate(.72) contrast(1.06);transition:filter .5s}
+.royal-portrait:hover .portrait-frame{transform:translateY(-5px);filter:drop-shadow(0 0 12px #af8b3e33)}.royal-portrait:hover img{filter:saturate(1) contrast(1.03)}
+.frame-crown{position:absolute;z-index:3;top:-27px;left:50%;transform:translateX(-50%);color:#ddbf7f;font-size:35px;text-shadow:0 2px 1px #000,0 0 12px #000;background:radial-gradient(ellipse,#1b1510 35%,transparent 70%);padding:0 14px}
+.frame-jewel{position:absolute;z-index:3;bottom:-9px;left:50%;transform:translateX(-50%);font-size:22px;color:#7e2126;text-shadow:1px 0 #e0ba7a,-1px 0 #e0ba7a,0 1px #e0ba7a,0 -1px #e0ba7a}
+.royal-portrait figcaption{padding:23px 0 0}.royal-portrait figcaption>span{font-size:9px;letter-spacing:.16em;color:#b9a481}.royal-portrait h3{font:400 clamp(24px,3vw,36px) var(--serif);margin:9px 0 3px;color:#e8dbc3}.royal-portrait figcaption p{font:10px var(--sans);letter-spacing:.4em;color:#aa9577;margin:0}
+.profile-footer{margin-top:auto;color:#b9a481;border-color:#97733d44}
+.dragon-flight{width:clamp(120px,16vw,240px);top:13%;animation-duration:42s;animation-delay:-13s;opacity:.8;filter:brightness(.6)}
+.dragon-flight.distant{width:clamp(75px,9vw,135px);top:22%;animation-duration:58s;animation-delay:-39s;filter:brightness(.75)}
+.dragon-sprite{width:100%;aspect-ratio:1;background:url('assets/dragon-wingbeat.png') 0 0/400% 200% no-repeat;animation:wingbeat 1.4s steps(1) infinite}
+.distant .dragon-sprite{animation-duration:1.65s;animation-delay:-.55s}
+@keyframes wingbeat{0%,100%{background-position:0 0}16.666%{background-position:33.333333% 0}33.333%{background-position:66.666667% 0}50%{background-position:100% 0}66.666%{background-position:66.666667% 0}83.333%{background-position:33.333333% 0}}
+@media(max-width:600px){.royal-gallery{width:min(350px,100%);grid-template-columns:1fr;gap:50px;margin-top:35px}.royal-portrait,.royal-portrait.sovereign{margin:0}.royal-portrait.sovereign{order:-1}.portrait-frame{max-height:410px}.profile-content{padding-top:35px}.royal-portrait h3{font-size:32px}.enter-button{padding:14px 24px;gap:16px}.enter-label{font-size:12px}.enter-label small{font-size:8px}.profile-content #profile-bio{font-size:16px}.dragon-flight{top:12%}}
+@media(prefers-reduced-motion:reduce){.dragon-flight{display:none}}
+
+/* Full viewport artwork; keep content below the external xat menu. */
+:root{--xat-menu-height:88px;--top-clearance:calc(var(--xat-menu-height) + env(safe-area-inset-top,0px))}
+html{width:100%;scroll-padding-top:calc(var(--top-clearance) + 20px)}
+body,main{width:100%;min-height:100dvh}
+.landscape{inset:0;width:100%;height:100dvh;background-size:cover;background-position:center;transform:none;animation:none;pointer-events:none}
+.screen{width:100%;min-height:100dvh}
+.entrance{padding-top:calc(var(--top-clearance) + 24px);padding-bottom:max(24px,env(safe-area-inset-bottom,0px))}
+.profile{padding-top:calc(var(--top-clearance) + 24px)}
+.entrance-title{padding:clamp(24px,5vh,60px) 0;flex-shrink:0}
+.topline,.profile-header{flex-shrink:0}
+.cinema{position:fixed;inset:0;width:100%;height:100dvh;min-height:0;padding:0;overflow:hidden;z-index:10}
+.cinema video{position:absolute;inset:0;width:100%;height:100%;min-height:0;object-fit:cover;object-position:center}
+.cinema-bar{z-index:1;background:linear-gradient(transparent,rgba(0,0,0,.72));padding-bottom:max(14px,env(safe-area-inset-bottom,0px));pointer-events:none}
+.cinema-bar button{pointer-events:auto;text-shadow:0 2px 6px #000}
+body[data-screen="cinema"]{overflow:hidden}
+#profile-name,button{scroll-margin-top:calc(var(--top-clearance) + 20px)}
+@media(max-height:760px) and (min-width:601px){.entrance-title h1 strong{font-size:clamp(50px,7vw,98px)}.entrance-title h1 span{font-size:clamp(25px,3vw,40px)}.entrance-title .eyebrow{margin-bottom:16px}.entrance-title .rule{margin:16px auto}.entrance-title .winter{margin-bottom:24px}}
+
+
+/* User emblem: original PNG on layered faces with a slow 3D turn. */
+.page-emblem{width:220px;height:92px;flex:0 0 220px;perspective:850px;letter-spacing:normal}
+.emblem-rotation{position:relative;width:100%;height:100%;transform-style:preserve-3d;animation:emblem-turn 28s linear infinite}
+.emblem-layer{position:absolute;inset:0;background:url('assets/page-emblem.png') center 42%/100% auto no-repeat;backface-visibility:hidden}
+.emblem-front{transform:translateZ(4px);filter:drop-shadow(0 2px 3px #0008)}
+.emblem-back{transform:rotateY(180deg) translateZ(4px)}
+.depth-one{transform:translateZ(2px);filter:brightness(.35);backface-visibility:visible}
+.depth-two{transform:translateZ(0);filter:brightness(.25);backface-visibility:visible}
+.depth-three{transform:translateZ(-2px);filter:brightness(.35);backface-visibility:visible}
+@keyframes emblem-turn{from{transform:rotateX(-8deg) rotateY(0)}to{transform:rotateX(-8deg) rotateY(360deg)}}
+@media(max-width:600px){.page-emblem{width:150px;height:70px;flex-basis:150px}.profile-header{gap:10px}.profile-header .text-button{padding:12px 10px;font-size:10px}.topline{gap:12px}}
+@media(prefers-reduced-motion:reduce){.emblem-rotation{animation:none;transform:rotateX(-8deg) rotateY(-12deg)}}
+
+.video-gallery{width:min(1200px,100%);margin:30px auto 45px}
+.video-gallery figure{margin:0;min-width:0}
+.featured-video{width:min(920px,100%);margin:0 auto 38px!important}
+.medieval-video-frame{position:relative;padding:10px;border:1px solid #c4a16a;background:linear-gradient(120deg,#362718,#c7a56a 22%,#44301e 26%,#947346 75%,#dfc58c 80%,#342517);box-shadow:0 12px 36px #0008,inset 0 0 0 3px #141110,inset 0 0 0 5px #b492596b}
+.medieval-video-frame iframe{display:block;width:100%;aspect-ratio:16/9;border:0;background:#080b0f}
+.secondary-videos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.video-gallery figcaption{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 3px 0;color:#c8ad7e;font:11px var(--serif);letter-spacing:.08em}
+.video-gallery figcaption a{color:#b7b5b0;font:12px var(--sans);letter-spacing:0;text-decoration:none}
+.video-gallery figcaption a:hover{color:#f1d8aa;text-decoration:underline}
+@media(max-width:800px){.secondary-videos{grid-template-columns:1fr;gap:30px;width:min(560px,100%);margin:auto}.featured-video{margin-bottom:30px!important}.medieval-video-frame{padding:7px}}
+
+/* Compact desktop composition: portraits beside the video collection. */
+.portrait-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:center}
+.portrait-strip figure{margin:0;text-align:center;min-width:0}
+.portrait-strip .portrait-frame{padding:7px}
+.portrait-strip .frame-crown{font-size:24px;top:-20px}
+.portrait-strip figcaption{font:18px var(--serif);color:#e8dbc3;margin-top:14px}
+.portrait-strip small{display:block;font:9px var(--sans);letter-spacing:.18em;color:#b9a481;margin-top:4px}
+@media(min-width:1000px) and (min-height:650px){
+ .profile{height:100dvh;min-height:650px;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);grid-template-rows:52px auto minmax(0,1fr) 30px;column-gap:38px;row-gap:10px;padding:calc(var(--top-clearance) + 12px) 4.4vw 12px}
+ .profile-header{grid-column:1/-1;padding-bottom:4px}
+ .profile-header .page-emblem{width:150px;height:48px;flex-basis:150px}
+ .profile-content{grid-column:1/-1;padding:4px 0 0}
+ .profile-content .eyebrow{font-size:10px;margin-bottom:5px}
+ .profile-content h2{font-size:clamp(28px,3vw,42px)}
+ .profile-content .rule{margin:6px auto}
+ .profile-content #profile-bio{font-size:15px;line-height:1.4;margin:4px 0}
+ .portrait-strip{grid-column:1;grid-row:3;align-self:center;gap:16px}
+ .portrait-strip .portrait-frame{aspect-ratio:3/4;max-height:clamp(150px,29vh,310px)}
+ .video-gallery{grid-column:2;grid-row:3;align-self:center;justify-self:center;width:min(100%,calc((100dvh - var(--top-clearance) - 300px)*1.22));margin:0}
+ .featured-video{width:86%;margin:0 auto 16px!important}
+ .medieval-video-frame{padding:5px}
+ .featured-video .frame-crown{font-size:23px;top:-19px}
+ .secondary-videos{gap:12px}
+ .video-gallery figcaption{padding:7px 0 0;font-size:9px;gap:4px}
+ .video-gallery figcaption a{font-size:9px}
+ .profile-footer{grid-column:1/-1;margin:0;padding:7px 0;font-size:9px}
+}
+@media(max-width:999px),(max-height:649px){.portrait-strip{width:min(600px,100%);margin:25px auto 35px}.portrait-strip figcaption{font-size:14px}.portrait-strip .portrait-frame{padding:5px}.portrait-strip{gap:12px}}
+
+/* Sculpted Cinzel lettering, with actual Z-separated text planes. */
+.page-emblem{width:220px;height:76px;flex-basis:220px}
+.type-sculpture{font-family:var(--serif);font-weight:700;text-align:center;line-height:1.05;letter-spacing:.09em;font-size:36px;animation-duration:32s}
+.type-depth,.type-face{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;background:none;white-space:nowrap}
+.type-depth{transform:translateZ(calc(var(--depth)*.45px));color:#615441;text-shadow:0 1px #201a14;backface-visibility:visible}
+.type-face{transform:translateZ(6px);color:#efe5cd;text-shadow:0 1px #fff9,0 -1px #34281b,1px 2px 2px #17100b;backface-visibility:hidden}
+.type-back{transform:rotateY(180deg) translateZ(6px)}
+.type-sculpture small{font-family:inherit;font-size:.48em;letter-spacing:.06em;display:block;margin-top:7px}
+.profile-header .page-emblem{width:190px;height:58px;flex-basis:190px}.profile-header .type-sculpture{font-size:28px}
+/* Pointed arches, layered aged-brass mouldings and floating portraits. */
+.portrait-strip .portrait-frame{border-radius:50% 50% 3px 3px / 43% 43% 3px 3px;border:2px solid #b69a62;background:repeating-linear-gradient(90deg,#413222 0,#705336 2px,#bd9c60 3px,#483321 5px);box-shadow:0 20px 25px -12px #000,inset 0 0 0 2px #221b15,inset 0 0 0 4px #d9be8370;animation:portrait-float 7s ease-in-out infinite}
+.portrait-strip figure:nth-child(2) .portrait-frame{animation-delay:-2.3s}.portrait-strip figure:nth-child(3) .portrait-frame{animation-delay:-4.6s}
+.portrait-frame:before{border:2px double #d3ba82;border-radius:inherit;inset:4px}
+.gothic-finial{font-family:Georgia,serif;color:#d3b476;top:-24px!important;font-size:27px!important;text-shadow:0 2px #312015,0 0 5px #000}
+.medieval-video-frame{border:3px double #c4a16a;background:repeating-linear-gradient(135deg,#3f3020 0,#745939 2px,#c6a367 3px,#493621 5px);box-shadow:0 16px 28px -10px #000,inset 0 0 0 2px #171512;outline:1px solid #6c5538;outline-offset:3px}
+@keyframes portrait-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.profile{display:flex;flex-direction:column;height:auto;min-height:100dvh;gap:0}
+.profile-header{width:100%;min-height:58px}
+.profile-content{text-align:center;padding:10px 0 5px;flex-shrink:0}
+.portrait-strip{width:min(430px,80%);margin:22px auto 20px;gap:28px;flex-shrink:0}
+.portrait-strip .portrait-frame{height:clamp(105px,15vh,175px);max-height:none;aspect-ratio:auto}
+.portrait-strip figcaption{font-size:15px;margin-top:9px}
+.video-gallery{width:min(780px,90%);margin:12px auto 24px;flex-shrink:0}
+.featured-video{width:min(460px,72%);margin:0 auto 20px!important}
+.secondary-videos{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.video-gallery figcaption{padding-top:9px;font-size:10px}.video-gallery figcaption a{font-size:10px}
+.profile-footer{width:100%;margin-top:auto}
+@media(min-width:1000px) and (min-height:650px){
+.profile{padding-top:calc(var(--top-clearance) + 8px)}
+.profile-content h2{font-size:28px}.profile-content .eyebrow{margin-bottom:4px}.profile-content .rule{margin:4px auto}.profile-content #profile-bio{margin:2px 0;font-size:14px}
+.portrait-strip{width:340px;margin:18px auto 12px;gap:24px}.portrait-strip .portrait-frame{height:clamp(92px,12vh,145px)}
+.video-gallery{width:min(690px,calc((100dvh - var(--top-clearance) - 340px)*1.85));margin:8px auto 14px}
+.featured-video{width:60%;margin-bottom:12px!important}.secondary-videos{gap:16px}.video-gallery figcaption{font-size:9px}.video-gallery figcaption a{font-size:9px}
+}
+@media(max-width:600px){.type-sculpture{font-size:26px}.page-emblem{width:165px;flex-basis:165px}.profile-header .page-emblem{width:155px;flex-basis:155px}.profile-header .type-sculpture{font-size:24px}.portrait-strip{width:95%;gap:16px}.secondary-videos{grid-template-columns:1fr}.video-gallery{width:95%}.featured-video{width:100%}}
+@media(prefers-reduced-motion:reduce){.portrait-strip .portrait-frame{animation:none}.type-sculpture{animation:none;transform:rotateX(-8deg) rotateY(-14deg)}}
+
+/* Larger emblem with readable front/back faces and opaque extrusion layers. */
+.page-emblem{width:280px;height:94px;flex-basis:280px;perspective:1000px}
+.type-sculpture{font-size:46px}
+.profile-header .page-emblem{width:260px;height:90px;flex-basis:260px}
+.profile-header .type-sculpture{font-size:42px}
+.type-depth{backface-visibility:hidden;text-shadow:none;color:#76654a}
+.type-depth::after{content:'PAGE';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;visibility:hidden}
+.type-face{transform:translateZ(6px);backface-visibility:hidden}
+.type-back{transform:rotateY(180deg) translateZ(6px);backface-visibility:hidden}
+.profile{height:auto;min-height:100dvh;overflow:visible}
+.profile-header{min-height:94px}
+.profile-content{padding:18px 0 14px}
+.profile-content h2{font-size:clamp(34px,4vw,54px)}
+.profile-content .eyebrow{font-size:12px;margin-bottom:12px}
+.profile-content #profile-bio{font-size:18px;margin:10px 0}
+.profile-content .rule{margin:14px auto}
+.portrait-strip{width:min(760px,92%);gap:clamp(20px,4vw,58px);margin:40px auto 42px}
+.portrait-strip .portrait-frame{height:clamp(180px,25vw,290px);max-height:none;padding:10px}
+.portrait-strip figcaption{font-size:clamp(19px,2vw,26px);margin-top:18px}
+.portrait-strip small{font-size:11px;margin-top:7px}
+.video-gallery{width:min(1080px,94%);margin:20px auto 45px}
+.featured-video{width:min(800px,100%);margin:0 auto 34px!important}
+.secondary-videos{gap:26px}
+.medieval-video-frame{padding:10px}
+.video-gallery figcaption{font-size:12px;padding-top:14px}
+.video-gallery figcaption a{font-size:12px}
+.profile-footer{padding:20px 0;font-size:11px}
+@media(max-width:600px){.page-emblem{width:210px;flex-basis:210px;height:82px}.type-sculpture{font-size:36px}.profile-header .page-emblem{width:190px;flex-basis:190px;height:82px}.profile-header .type-sculpture{font-size:32px}.profile-header{flex-wrap:wrap;justify-content:center}.portrait-strip{gap:14px;width:100%}.portrait-strip .portrait-frame{height:clamp(130px,34vw,200px);padding:6px}.portrait-strip figcaption{font-size:15px}.portrait-strip small{font-size:9px}.video-gallery{width:100%}}
+.reverse-depth{transform:rotateY(180deg) translateZ(calc(var(--depth)*.45px))}
+
+/* Reveal more of the winter landscape behind the inner profile. */
+.profile{background:radial-gradient(ellipse at 50% 45%,rgba(30,26,25,.35),rgba(6,14,22,.64) 85%);backdrop-filter:blur(2px)}
+.profile-content,.portrait-strip figcaption,.profile-footer{text-shadow:0 2px 8px rgba(0,0,0,.85)}
+
+/* Cinematic fire passage: gradual camera movement, warm light and drifting embers. */
+.dragon-transition{position:fixed;inset:0;z-index:50;background:#080605;overflow:hidden;isolation:isolate;animation:dragon-passage 4.8s ease-in-out both}
+.fire-scene{position:absolute;inset:-5%;background:url('assets/dragon-fire.png') 44% center/cover no-repeat;animation:dragon-approach 4.8s cubic-bezier(.22,.6,.3,1) both;will-change:transform}
+.fire-glow{position:absolute;inset:0;background:radial-gradient(ellipse at 75% 55%,#fca83a66,transparent 65%);mix-blend-mode:screen;animation:fire-breath 4.8s ease-in-out both;pointer-events:none}
+#skip-dragon{position:absolute;right:5%;bottom:35px;padding:12px 20px;border:1px solid #d8b56e80;background:#0c090bb3;color:#eed29b;font-family:var(--serif);z-index:3}
+.dragon-active{overflow:hidden}.dragon-active main>.screen{pointer-events:none}
+.embers{position:absolute;inset:0;overflow:hidden;pointer-events:none}.embers i{position:absolute;left:var(--x);bottom:-20px;width:3px;height:3px;border-radius:50%;background:#ffd78a;box-shadow:0 0 9px 2px #ef8527a8;animation:ember-rise var(--duration) linear var(--delay) infinite}
+@keyframes dragon-approach{0%{transform:scale(1.02) translateX(-1.5%)}100%{transform:scale(1.15) translateX(1.5%)}}
+@keyframes dragon-passage{0%{opacity:0}12%,83%{opacity:1}100%{opacity:0}}
+@keyframes fire-breath{0%{opacity:0;transform:scale(.85)}35%{opacity:.35}65%{opacity:.8}100%{opacity:.15;transform:scale(1.15)}}
+@keyframes ember-rise{0%{transform:translate(0,0);opacity:0}15%,65%{opacity:.8}100%{transform:translate(120px,-100vh);opacity:0}}
+.portrait-frame,.medieval-video-frame{border-color:#d9b872;outline-color:#ab8548;box-shadow:0 16px 32px -12px #000,0 0 18px #d3a65020,inset 0 0 0 2px #2b1b0e}
+.portrait-strip .portrait-frame:before{border-color:#edd09b}
+.frame-jewel{color:#a67029;text-shadow:1px 0 #ffe2a0,-1px 0 #ffe2a0,0 1px #ffe2a0,0 -1px #ffe2a0}
+.profile-content h2{color:#f0dfb9;text-shadow:0 2px 8px #000,0 0 25px #d3a04b26}
+.enter-button:hover{filter:drop-shadow(0 0 23px #e4b95666)}
+@media(prefers-reduced-motion:reduce){.dragon-transition,.fire-scene,.fire-glow,.embers i{animation:none}.embers{display:none}}
+
+/* The profile is already behind the fire; an expanding burn reveals it. */
+.dragon-transition{background:transparent;animation:none}
+.dragon-veil{position:absolute;inset:0;background:#080605;will-change:mask-image}
+#transition-flames{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.dragon-transition .fire-scene{animation-duration:5.8s}
+.dragon-transition .fire-glow{animation-duration:5.8s}
+.dragon-active #profile{animation:none}
+.dragon-transition .embers{opacity:.65}
+
+/* Fire-only passage and a small guardian breathing toward the PAGE lettering. */
+.dragon-veil{background:radial-gradient(ellipse at 50% 90%,#81300e 0%,#2c1008 45%,#080605 85%)}
+.dragon-transition .fire-glow{background:radial-gradient(ellipse at 50% 75%,#ff9a3266,transparent 70%)}
+.page-emblem,.profile-header .page-emblem{position:relative;box-sizing:border-box;width:390px;flex-basis:390px;padding-left:110px}
+.emblem-dragon{position:absolute;left:0;top:0;width:135px;height:90px;pointer-events:none;animation:guardian-hover 5s ease-in-out infinite}
+.emblem-dragon img{display:block;width:135px;height:90px;object-fit:contain;mix-blend-mode:screen;filter:brightness(1.5);mask-image:radial-gradient(ellipse,#000 48%,transparent 74%)}
+.emblem-flame{position:absolute;left:108px;top:42px;width:76px;height:26px;transform-origin:left center;clip-path:polygon(0 45%,20% 32%,48% 9%,60% 28%,100% 3%,83% 41%,100% 63%,65% 59%,83% 94%,42% 72%,17% 61%);background:radial-gradient(ellipse at left,#fff8ca 0%,#ffd475 23%,#ff861d 48%,#c93608a6 70%,transparent 100%);filter:drop-shadow(0 0 5px #ff8b20);animation:guardian-breath 3.8s ease-in-out infinite;mix-blend-mode:screen}
+@keyframes guardian-hover{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-4px) rotate(1deg)}}
+@keyframes guardian-breath{0%,12%,90%,100%{opacity:0;transform:scale(.15,.4)}25%{opacity:.8;transform:scale(.7,.9)}38%,58%{opacity:1;transform:scale(1,1)}45%,68%{opacity:.85;transform:scale(.87,.72)}80%{opacity:.5;transform:scale(1.08,.8)}}
+@media(max-width:600px){.page-emblem,.profile-header .page-emblem{width:280px;flex-basis:280px;padding-left:80px}.emblem-dragon{transform-origin:left center;scale:.74;top:3px}.topline{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){.emblem-dragon,.emblem-flame{animation:none}.emblem-flame{opacity:.6}}
+/* Faster fire timing stays in step with the procedural flame renderer. */
+.dragon-transition .fire-glow{animation-duration:3.22s}
+.dragon-transition .embers i{animation-duration:1.8s}
+.emblem-flame{animation-duration:2.2s}
+
+/* Reference-inspired openwork crown and acanthus in sculpted metallic gold. */
+.portrait-strip{width:min(900px,96%);gap:clamp(18px,3vw,44px)}
+.portrait-strip .portrait-frame{height:clamp(260px,33vw,390px);padding:0;border:0;border-radius:0;background:none;box-shadow:none;outline:0;isolation:isolate}
+.portrait-strip .portrait-frame img{position:absolute;inset:17% 16% 16%;width:68%;height:67%;border-radius:42% 42% 8px 8px / 15% 15% 8px 8px;box-shadow:0 8px 22px #0009;object-fit:cover}
+.portrait-strip .portrait-frame::before{content:'';position:absolute;inset:0;z-index:2;border:0;border-radius:0;background:url('assets/royal-gold-frame.png') center/100% 100% no-repeat;filter:drop-shadow(0 5px 4px #0009);pointer-events:none}
+.portrait-strip .portrait-frame::after{display:none}
+.portrait-strip .frame-crown,.portrait-strip .frame-jewel,.medieval-video-frame .frame-crown,.medieval-video-frame .frame-jewel{display:none}
+.medieval-video-frame{padding:10% 12%;border:0;outline:0;border-radius:0;background:none;box-shadow:none;isolation:isolate}
+.medieval-video-frame::before{content:'';position:absolute;inset:0;z-index:2;background:url('assets/royal-gold-frame.png') center/100% 100% no-repeat;filter:drop-shadow(0 5px 4px #000a);pointer-events:none}
+.medieval-video-frame iframe{position:relative;z-index:1;box-shadow:0 6px 25px #000b}
+.video-gallery figcaption{padding-top:10px}
+@media(max-width:600px){.portrait-strip{gap:10px;width:100%}.portrait-strip .portrait-frame{height:clamp(175px,46vw,265px)}.portrait-strip figcaption{font-size:14px}.portrait-strip small{font-size:8px}.medieval-video-frame{padding:10% 12%}}
+
+/* A warm fire halo surrounds the rotating name without obscuring the lettering. */
+.page-emblem,.profile-header .page-emblem{width:280px;flex-basis:280px;padding-left:0;isolation:isolate}
+
+/* Wide players: preserve ornament detail instead of stretching a portrait image. */
+.video-gallery{width:min(1280px,100%)}
+.featured-video{width:min(1040px,100%);margin-bottom:48px!important}
+.medieval-video-frame{padding:28px 22px;margin-top:20px;border:3px solid #b28a45;background:linear-gradient(135deg,#553913,#edcf84 15%,#8d6126 32%,#f4d998 49%,#765022 72%,#d8b167);box-shadow:inset 0 0 0 3px #302012,0 12px 26px #0008}
+.medieval-video-frame::before,.medieval-video-frame::after{content:'';position:absolute;left:50%;width:180px;height:46px;inset:auto;transform:translateX(-50%);background-image:url('assets/royal-gold-frame.png');background-size:180px 240px;background-repeat:no-repeat;filter:drop-shadow(0 3px 2px #0009);pointer-events:none;z-index:2}
+.medieval-video-frame::before{left:50%;top:-24px;background-position:center top}
+.medieval-video-frame::after{left:50%;bottom:-18px;background-position:center bottom}
+.medieval-video-frame iframe{aspect-ratio:16/9;min-height:200px;width:100%;border:1px solid #f1d392;box-sizing:border-box}
+.secondary-videos{gap:26px}
+.video-gallery figcaption{padding-top:24px}
+@media(max-width:1150px){.secondary-videos{grid-template-columns:1fr;width:min(680px,100%);margin:auto;gap:32px}}
+@media(max-width:600px){.medieval-video-frame{padding:22px 12px}.medieval-video-frame iframe{min-height:200px}.medieval-video-frame::before,.medieval-video-frame::after{width:150px;background-size:150px 200px;height:38px}}
+
+/* Continuous upward flames, behind the name instead of orbiting light blobs. */
+
+.video-feedback{font:13px/1.6 var(--sans);color:#eed8ac;background:#161616c9;border-left:2px solid #b28a45;padding:12px 15px;margin:14px 0 0;text-align:left}
+
+/* Restrained motion: metal catches light on interaction; portraits drift subtly. */
+@keyframes portrait-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.portrait-strip .portrait-frame{animation-duration:9s}
+.portrait-strip .portrait-frame::before{transition:filter .45s ease}
+@media(hover:hover){.portrait-strip figure:hover .portrait-frame::before{filter:drop-shadow(0 5px 4px #0009) brightness(1.12)}.enter-button:hover{filter:drop-shadow(0 0 12px #d3a65040);transform:translateY(-2px)}}
+.enter-button{transition:transform .35s ease,filter .35s ease}
+.enter-button:active{transform:translateY(0)}
+.enter-button:focus-visible,.text-button:focus-visible{outline:2px solid #ecd195;outline-offset:5px}
+@media(prefers-reduced-motion:reduce){.enter-button,.portrait-strip .portrait-frame::before{transition:none}.enter-button:hover{transform:none}}
+
+.entrance-footer .scroll-note{display:block;font-size:11px;letter-spacing:.12em;color:#cdb98f}
+
+/* Continuous, transparent flame field sits behind the rotating metal letters. */
+.page-emblem{isolation:isolate}
+.page-flame-canvas{position:absolute;left:4%;top:-39%;width:92%;height:155%;z-index:-1;pointer-events:none;mask-image:linear-gradient(transparent,#000 12%,#000 74%,transparent 97%)}
+.type-face{text-shadow:0 1px #fff9,0 -1px #34281b,1px 2px 3px #17100b,0 0 5px #080605}
+/* Flame base aligns behind the wordmark; the ID keeps a darker reading area. */
+.page-flame-canvas{left:12%;top:-37%;width:76%;height:137%;mask-image:linear-gradient(transparent,#000 9%,#000 66%,transparent 96%)}
+
+/* Volumetric fire: natural transparent edges, no CSS clipping of flame tips. */
+.page-flame-canvas{left:0;top:-62%;width:100%;height:185%;mask-image:linear-gradient(#000 0%,#000 73%,transparent 98%);opacity:.95}
+
+.page-flame-canvas{top:-90%;opacity:.82}
+
+/* Shared gold material: photo and video ornaments use precisely the same palette. */
+:root{--frame-gold:linear-gradient(135deg,#553913,#edcf84 15%,#8d6126 32%,#f4d998 49%,#765022 72%,#d8b167)}
+.medieval-video-frame{background:var(--frame-gold)}
+.portrait-strip .portrait-frame::before{background:var(--frame-gold);mask:url('assets/royal-gold-frame.png') center/100% 100% no-repeat;filter:drop-shadow(0 2px 1px #241604)}
+.medieval-video-frame::before,.medieval-video-frame::after{background:var(--frame-gold);mask-image:url('assets/royal-gold-frame.png');mask-size:180px 240px;mask-repeat:no-repeat;filter:drop-shadow(0 2px 1px #241604)}
+.medieval-video-frame::before{mask-position:center top}.medieval-video-frame::after{mask-position:center bottom}
+@media(hover:hover){.portrait-strip figure:hover .portrait-frame::before{filter:drop-shadow(0 2px 1px #241604)}}
+.page-flame-canvas{left:50%;top:50%;width:210px;height:210px;transform:translate(-50%,-50%);mask-image:none;opacity:.78}
+.medieval-video-frame iframe{min-height:0;aspect-ratio:16/9;height:auto;display:block}
+.secondary-videos{grid-template-columns:repeat(2,minmax(0,1fr));max-width:100%;margin:auto}
+.secondary-videos figure:last-child{grid-column:1/-1;width:calc(50% - 13px);justify-self:center}
+@media(max-width:850px){.secondary-videos{grid-template-columns:1fr;width:min(680px,100%)}.secondary-videos figure:last-child{grid-column:auto;width:100%}}
+@media(max-width:600px){.medieval-video-frame::before,.medieval-video-frame::after{mask-size:150px 200px}.page-flame-canvas{width:185px;height:185px}}
+/* Preserve the carved relief while sharing the same metallic gold material. */
+.portrait-strip .portrait-frame::before{background-image:url('assets/royal-gold-frame.png'),var(--frame-gold);background-size:100% 100%,100% 100%;background-position:center;background-repeat:no-repeat;background-blend-mode:luminosity}
+.medieval-video-frame::before,.medieval-video-frame::after{background-image:url('assets/royal-gold-frame.png'),var(--frame-gold);background-size:180px 240px,100% 100%;background-repeat:no-repeat;background-blend-mode:luminosity}
+.medieval-video-frame::before{background-position:center top,center}.medieval-video-frame::after{background-position:center bottom,center}
+@media(max-width:600px){.medieval-video-frame::before,.medieval-video-frame::after{background-size:150px 200px,100% 100%}}
+/* Keep one entrance choreography; avoid stacking a full-screen fade on the fire reveal. */
+#profile,#cinema{animation:none}
+.mist,.emblem-rotation,.dragon-flight{will-change:transform}
+body[data-screen="cinema"] .mist,body[data-screen="cinema"] .dragon-flight,body[data-screen="cinema"] .dragon-sprite{animation-play-state:paused}
+.profile-footer{gap:22px;flex-wrap:wrap}
+.music-toggle{font:12px var(--serif);letter-spacing:.05em;color:var(--gold);border-bottom:1px solid #b28a4566}
+/* Two replacement Shorts, balanced beneath the featured player. */
+.secondary-videos figure:last-child{grid-column:auto;width:100%}
+/* Audio controls remain alongside navigation at the top of the profile. */
+.profile-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+@media(max-width:600px){.profile-actions{justify-content:center}}
+/* Modern metallic frames: clean bevels shared by portraits and videos. */
+.portrait-strip .portrait-frame,.medieval-video-frame{padding:9px;border:1px solid #d7b773;border-radius:8px;background:linear-gradient(135deg,#63471f,#eed6a1 22%,#99713d 48%,#ead098 77%,#553b1c);outline:none;box-shadow:0 16px 34px #0007,inset 0 0 0 2px #34281c}
+.portrait-strip .portrait-frame::before,.portrait-strip .portrait-frame::after,.medieval-video-frame::before,.medieval-video-frame::after{display:none}
+.portrait-strip .portrait-frame img{position:relative;inset:auto;width:100%;height:100%;border-radius:3px;object-fit:cover}
+.medieval-video-frame video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#080b0f;border:1px solid #ead09888;border-radius:3px}
+@media(max-width:600px){.portrait-strip .portrait-frame,.medieval-video-frame{padding:6px}}

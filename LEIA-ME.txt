@@ -1,0 +1,3 @@
+Abra index.html para visualizar o tema. Os videos agora estao na pasta assets e nao dependem do player do YouTube.
+Para GitHub Pages, envie index.html, CSS, JavaScript, favicon.svg, .nojekyll e toda a pasta assets.
+Mantenha os arquivos MP4 dentro de assets. O circulo de fogo usa textura incorporada.
